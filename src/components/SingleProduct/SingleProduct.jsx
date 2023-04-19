@@ -6,17 +6,37 @@ import Category from '../Home/Category/Category';
 import "./SingleProduct.scss"
 import { motion } from 'framer-motion'
 import { fadeIn } from '../../variants'
+import { useState } from "react";
+import { getALl, getId } from "../../api/products";
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
 const SingleProduct = () => {
+    
+    const [products, setProducts] = useState([])
+    const {id} = useParams()
+    const showItem = async () => {
+
+        if (id) {
+        const { data } = await getId(id)
+            setProducts(data)
+            console.log(data)
+        }
+    }
+    useEffect(() => {
+        showItem()
+    },[])
     return <div className="single-product-main-content">
-        <div  className="layout">
+        
+        <div className="layout">
+            
             <div className="single-product-page">
                 <motion.div variants={fadeIn('up', 0.25)} initial="hidden" whileInView={'show'} viewport={{ once: false, amount: 0.7 }} className="left">
-                    <img src={prod} alt="123" />
+                    <img src={products.image} alt="123" />
                 </motion.div>
                 <motion.div variants={fadeIn('left', 0.25)} initial="hidden" whileInView={'show'} viewport={{ once: false, amount: 0.7 }} className="right">
-                    <span className="name"> Product Name</span>
-                    <span className="price"> Price :<span className="text-red-500"> 599 $</span> </span>
-                    <span className="desc leading-6"> <span className="text-slate-900">Air Jordan 4 Retro</span>  ‘Seafoam’hiện đã có sẵn tại <span className="text-slate-900">Sneaker ThanhDo Shop</span> với mức giá hấp dẫn, đừng bỏ lỡ cơ hội của mình nhé! Cập nhật nhanh nhất lịch ra mắt của các mẫu giày mới nhất và tin tức thời trang trong nước và trên thế giới bằng cách theo dõi Sneaker Daily trên Facebook hoặc Instagram.</span>
+                    <span className="name"> { products.name}</span>
+                    <span className="price"> Price :<span className="text-red-500"> { products.price}</span> </span>
+                    <span className="desc leading-6"> <span className="text-slate-900">{products.description }</span>  </span>
                     <div className="cart-buttons">
                         <div className="quanlity-buttons">
                             <span> - </span>

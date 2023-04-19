@@ -9,6 +9,8 @@ import Newsletter from './components/Footer/Newsletter/Newsletter';
 import AppContext from "./utils/Context";
 import Signup from "./auth/Signup";
 import Signin from "./auth/Signin";
+import Admin from "./admin/admin";
+import AddItem from "./admin/addItem";
 
 function App() {
     return (
@@ -22,6 +24,10 @@ function App() {
                 <Route path="/signup" element={<Signup />} />
                 <Route exact path="/signin" element={<Signin />} />
                 <Route exact path="/brd" element={<SingleProduct />} />
+                <Route exact path="/auth/admin" element={<Admin />} />
+                <Route exact path="/auth/admin/add" element={<AddItem />} />
+
+
             </Routes>
             <Newsletter />
             <Footer />

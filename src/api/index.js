@@ -15,3 +15,10 @@ export const signinSchema = Yup.object({
     password: Yup.string().required().trim(),
     confirmPassword: Yup.string().oneOf([Yup.ref("password")]).required().trim(),
 })
+
+export const addSchema = Yup.object({
+    name: Yup.string().required().trim(),
+    price: Yup.number().required(),
+    description: Yup.string().required().trim(),
+    image: Yup.string().required().trim(),
+})
