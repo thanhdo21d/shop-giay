@@ -9,9 +9,9 @@ import { fadeIn } from '../../variants'
 import { useState } from "react";
 import { getALl, getId } from "../../api/products";
 import { useParams } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect ,useContext} from "react";
+import { Context } from "../../utils/Context";
 const SingleProduct = () => {
-    
     const [products, setProducts] = useState([])
     const {id} = useParams()
     const showItem = async () => {
@@ -43,7 +43,7 @@ const SingleProduct = () => {
                             <span> 5 </span>
                             <span> + </span>
                         </div>
-                        <button className="add-to-cart  flex overflow-hidden bg-fixed opacity-100 transition duration-300 ease-in-out hover:opacity-70"><FaCartPlus size={20} /> ADD TO CART </button>
+                        <button  className="add-to-cart  flex overflow-hidden bg-fixed opacity-100 transition duration-300 ease-in-out hover:opacity-70"><FaCartPlus size={20} /> ADD TO CART </button>
                     </div>
                     {/*  */}
                     <span className="divider" />

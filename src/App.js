@@ -11,6 +11,7 @@ import Signup from "./auth/Signup";
 import Signin from "./auth/Signin";
 import Admin from "./admin/admin";
 import AddItem from "./admin/addItem";
+import Update from "./admin/update";
 
 function App() {
     return (
@@ -26,6 +27,8 @@ function App() {
                 <Route exact path="/brd" element={<SingleProduct />} />
                 <Route exact path="/auth/admin" element={<Admin />} />
                 <Route exact path="/auth/admin/add" element={<AddItem />} />
+                <Route exact path="/auth/admin/update/:id" element={<Update />} />
+
 
 
             </Routes>

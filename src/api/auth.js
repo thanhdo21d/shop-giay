@@ -1,11 +1,11 @@
 import { instants } from "."
 
-export const signup = () => {
+export const signup = (body) => {
     const uri = ("/user")
-    return instants.post(uri)
+    return instants.post(uri,body)
 }
 
-export const signin = () => {
+export const signin = (body) => {
     const uri = ("/user")
-    return instants.post(uri)
+    return instants.post(uri,body)
 }
