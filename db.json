@@ -29,13 +29,18 @@
       "email": "dovtph24172@fpt.edu.vn",
       "password": "xxxxxx",
       "id": 7
+    },
+    {
+      "email": "thanhdo9xi@gmail.com",
+      "password": "thanhdo21",
+      "id": 8
     }
   ],
   "products": [
     {
       "image": "/image/1.webp",
       "description": "Air Jordan 4 Retro Seafoam hiện đã có sẵn tại Sneaker Daily Shop với mức giá hấp dẫn, đừng bỏ lỡ cơ hội của mình nhé! Cập nhật nhanh nhất lịch ra mắt của các mẫu giày mới nhất và tin tức thời trang trong nước và trên thế giới bằng cách theo dõi Sneaker Daily trên Facebook hoặc Instagram",
-      "price": 6000,
+      "price": 7000,
       "name": "Giày Air Jordan 4 Retro",
       "id": 1
     },

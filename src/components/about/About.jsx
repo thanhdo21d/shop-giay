@@ -57,11 +57,11 @@ export default function About() {
           {/*  */}
         </div>
         <div className='text-center items-center justify-center  '>
-          <div className='text-center items-center justify-center  mx-auto inline-block w-[800px] h-[200px]  shadow-2xl'>
-            <img className='w-[100px] inline-block' src={ imgc} />
-            <h2 className='text-3xl text-green-300 font-semibold pl-2 '>VŨ THÀNH ĐÔ</h2>
+          <motion.div variants={fadeIn('up', 0.5)} initial="hidden" whileInView={'show'} viewport={{ once: false, amount: 0.7 }} className='text-center items-center justify-center  mx-auto inline-block w-[800px] h-[250px]  shadow-2xl'>
+            <img className='w-[100px] inline-block mt-5 rounded-md shadow-2xl' src={ imgc} />
+            <h2 className='text-3xl text-green-300 font-semibold pl-2 py-5 '>VŨ THÀNH ĐÔ</h2>
             <p className='text-xl text-white font-bold pl-2 pt-2'>CEO & Founder</p>
-          </div>
+          </motion.div>
           
           </div>
       </div>
