@@ -150,6 +150,89 @@
         }
     }
 }
+.success-box {
+  /* Define display style for success box */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  width: 300px;
+  height: 150px;
+  box-shadow: #00cc00;
+  background-color: white;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  /* Add animation for success box */
+  animation-name: successAnimation;
+  animation-timing-function: ease-in-out;
+  -webkit-transform: translate(-50%, -60%);
+  -moz-transform: translate(-50%, -60%);
+  -ms-transform: translate(-50%, -60%);
+  -o-transform: translate(-50%, -60%);
+}
+
+.success-text {
+  /* Define display style for text in success box */
+  text-align: center;
+  font-size: 44px;
+  color: #000000;
+}
+
+@keyframes successAnimation {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
+}
+
+.tick-icon {
+  /* Define display style for tick icon */
+  margin-right: 10px;
+  color: #00cc00;
+  font-size: 54px;
+  animation-name: tickAnimation;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes tickAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 @keyframes slideCartWindow{
     0%{ transform:translateX(100%) ; -webkit-transform:translateX(100%) ; -moz-transform:translateX(100%) ; -ms-transform:translateX(100%) ; -o-transform:translateX(100%) ; }
     100%{ transform:translateX(0%) ; -webkit-transform:translateX(0%) ; -moz-transform:translateX(0%) ; -ms-transform:translateX(0%) ; -o-transform:translateX(0%) ; }

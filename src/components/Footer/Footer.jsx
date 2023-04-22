@@ -1,10 +1,12 @@
 import "./Footer.scss";
 import { FaLocationArrow, FaMobileAlt, FaEnvelope } from 'react-icons/fa'
+import { motion } from 'framer-motion'
+import { fadeIn } from '../../variants'
 import { MdPayment, MdPayments, MdOutlinePayments } from 'react-icons/md'
 import { React } from 'react';
 const Footer = () => {
     return <footer className="footer">
-        <div className="footer-content">
+        <motion.div variants={fadeIn('up', 0.3)} initial="hidden" whileInView={'show'} viewport={{ once: false, amount: 0.7 }} className="footer-content">
             <div className="col">
                 <div className="title">About</div>
                 <div className="text">
@@ -51,7 +53,7 @@ const Footer = () => {
                 <span className="text"> Terms & Conditions</span>
                 <span className="text"> Contact Us</span>
             </div>
-        </div>
+        </motion.div>
         <div className="bottom-bar">
             <div className="bottom-bar-content">
                 <div className="text">

@@ -12,6 +12,7 @@ import Signin from "./auth/Signin";
 import Admin from "./admin/admin";
 import AddItem from "./admin/addItem";
 import Update from "./admin/update";
+import About from "./components/about/About";
 
 function App() {
     return (
@@ -28,6 +29,8 @@ function App() {
                 <Route exact path="/auth/admin" element={<Admin />} />
                 <Route exact path="/auth/admin/add" element={<AddItem />} />
                 <Route exact path="/auth/admin/update/:id" element={<Update />} />
+                <Route exact path="/about" element={<About />} />
+
 
 
 

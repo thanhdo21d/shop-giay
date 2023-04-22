@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .single-product-main-content {
   margin: 20px 0;
 }
@@ -154,4 +155,88 @@
 }
 .single-product-main-content .layout .single-product-page .right .info-item .text-bold svg {
   margin: 0 5px;
+}
+
+.success-boxx {
+  /*Địnhnghĩakiểuhiểnthịchobảngsuccess*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 20%;
+  opacity: 0.8;
+  left: 88%;
+  transform: translate(-50%, -60%);
+  width: 300px;
+  height: 80px;
+  background-color: whitesmoke;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  /*Thêmhiệuứnghoạthìnhchobảngsuccess*/
+  animation-name: successAnimation;
+  animation-duration: 0s;
+  animation-timing-function: ease-in-out;
+  -webkit-transform: translate(-50%, -60%);
+  -moz-transform: translate(-50%, -60%);
+  -ms-transform: translate(-50%, -60%);
+  -o-transform: translate(-50%, -60%);
+}
+
+.success-text {
+  /* Định nghĩa kiểu hiển thị cho văn bản trong bảng success */
+  text-align: center;
+  font-size: 27px;
+  color: black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+@keyframes successAnimation {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
+}
+.tick-icon {
+  /* Định nghĩa kiểu hiển thị cho biểu tượng dấu tick */
+  margin-right: 10px;
+  color: #00cc00;
+  font-size: 54px;
+  animation-name: tickAnimation;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes tickAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }/*# sourceMappingURL=SingleProduct.css.map */

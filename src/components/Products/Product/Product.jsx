@@ -10,7 +10,7 @@ const Product = ({ products }) => {
   return (
     <div className="md:grid grid-cols-4">
       {products.map((item, index) => (
-        <div onClick={() => {
+        <div key={index} onClick={() => {
           navigate(`/Products/${item.id}`);
           window.location.reload()
         }} >

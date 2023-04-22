@@ -52,7 +52,7 @@
   display: flex;
   border: 2px solid rgba(0, 0, 0, 0.2);
   margin-right: 10px;
-  height: 50px;
+  height: 150px;
 }
 .cart-products .cart-product .prod-details .quanlity-buttons span {
   font-size: 18px;

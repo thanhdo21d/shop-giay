@@ -33,7 +33,7 @@ const Header = () => {
                     <div className="header-content">
                         <ul className="left">
                             <li onClick={()=> navigate("/")} className="overflow-hidden bg-fixed opacity-100 transition duration-300 ease-in-out hover:opacity-50">Home</li>
-                            <li className="overflow-hidden bg-fixed opacity-100 transition duration-300 ease-in-out hover:opacity-50">About</li>
+                            <li onClick={()=>navigate("/about")} className="overflow-hidden bg-fixed opacity-100 transition duration-300 ease-in-out hover:opacity-50">About</li>
                             <li onClick={()=> navigate("/category/1")}  className="overflow-hidden bg-fixed opacity-100 transition duration-300 ease-in-out hover:opacity-50">Category</li>
                         </ul>
                         <div className="center">

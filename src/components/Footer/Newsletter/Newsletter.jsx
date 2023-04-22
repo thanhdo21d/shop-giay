@@ -1,12 +1,14 @@
 import "./Newsletter.scss";
 import { FaFacebook } from 'react-icons/fa'
 import { AiFillTwitterCircle, AiFillInstagram, AiFillGithub } from 'react-icons/ai'
+import { motion } from 'framer-motion'
+import { fadeIn } from '../../../variants'
 const Newsletter = () => {
     return (
         <div style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}>
-            <div className="newsletter-selection">
+            <div  className="newsletter-selection">
 
-                <div className="newsletter-content">
+                <motion.div variants={fadeIn('up', 0.3)} initial="hidden" whileInView={'show'} viewport={{ once: false, amount: 0.7 }} className="newsletter-content">
                     <span className="small-text"> News Letter</span>
                     <span className="big-text"> Sign up for latest updates and offers</span>
                     <div className="form">
@@ -30,7 +32,7 @@ const Newsletter = () => {
                     </div>
 
 
-                </div>
+                </motion.div>
             </div>
         </div>
 
