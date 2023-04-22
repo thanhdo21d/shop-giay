@@ -48,6 +48,8 @@ export default function Admin() {
                           </th>
                           <th scope="col" className="px-6 py-3 text-xl text-red-500">
             Action
+              </th>
+                                <th scope="col" className="px-6 py-3 text-xl text-red-500">
           </th>
         </tr>
       </thead>
