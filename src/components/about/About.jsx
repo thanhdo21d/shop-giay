@@ -10,7 +10,7 @@ import { fadeIn } from '../../variants'
 export default function About() {
     return (
       <div className='section'>
-            <div className='container mx-auto grid grid-cols-3 gap-10 h-screen pt-20'>
+            <div className='container mx-auto md:grid grid-cols-3 gap-10 h-screen pt-20 sm:columns-2 sm:h-[1000px]'>
           {/*  */}
           <motion.div  className='h-fit pl-2 rounded-2xl shadow-2xl' variants={fadeIn('right', 0.3)} initial="hidden" whileInView={'show'} viewport={{ once: false, amount: 0.7 }} >
             <h1 className='text-4xl text-white'> <span className='text-orange-200'>
@@ -56,8 +56,8 @@ export default function About() {
           </motion.div>
           {/*  */}
         </div>
-        <div className='text-center items-center justify-center  '>
-          <motion.div variants={fadeIn('up', 0.5)} initial="hidden" whileInView={'show'} viewport={{ once: false, amount: 0.7 }} className='text-center items-center justify-center  mx-auto inline-block w-[800px] h-[250px]  shadow-2xl'>
+        <div className='text-center items-center justify-center'>
+          <motion.div variants={fadeIn('up', 0.5)} initial="hidden" whileInView={'show'} viewport={{ once: false, amount: 0.7 }} className='text-center rounded-2xl mb-2 items-center justify-center  mx-auto inline-block w-[800px] h-[250px]  shadow-2xl'>
             <img className='w-[100px] inline-block mt-5 rounded-md shadow-2xl' src={ imgc} />
             <h2 className='text-3xl text-green-300 font-semibold pl-2 py-5 '>VŨ THÀNH ĐÔ</h2>
             <p className='text-xl text-white font-bold pl-2 pt-2'>CEO & Founder</p>
